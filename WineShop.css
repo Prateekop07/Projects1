@@ -1,0 +1,1878 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: white;
+}
+
+header {
+    display: flex;
+    gap: 70rem;
+    border-bottom: 1px solid #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    margin-top: -46rem;
+}
+
+header #h {
+    color: #fff;
+    font-size: 15px;
+    font-style: italic;
+    width: 50%;
+    padding: .7rem 2rem;
+}
+
+header h3 {
+    padding-top: 10px;
+    font-style: italic;
+    color: #fff;
+    font-size: 15px;
+    width: 30%;
+}
+
+/* icon css start */
+.nav {
+    padding-top: 2rem;
+    /* position: fixed; */
+    background: #eee;
+    width: 100%;
+    height: 8rem;
+    z-index: 1;
+    margin-top: .1rem;
+}
+
+.container {
+    background: url("https://images.pexels.com/photos/2339180/pexels-photo-2339180.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: center;
+    height: 100vh;
+    animation: background 20s ease infinite;
+}
+
+@keyframes background {
+    0% {
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+#web{
+    font-size: 30px;
+    margin-top: -.8rem;
+    margin-left: -.5rem;
+}
+.dropdownmenu ul, .dropdownmenu li{
+    margin: 0;
+    padding: 0;
+}
+.dropdownmenu ul{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.dropdownmenu li{
+    /* float: left; */
+    position: relative;
+    width: auto;
+}
+.dropdownmenu a{
+    color: whitesmoke;
+    display: block;
+    font-weight: 800;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 15px 35px;
+    text-align: center;
+    transition: all 0.25s ease;
+    font-size: 14px;
+}
+
+#submenu{
+    left: 0rem;
+    opacity: 0;
+    position: absolute;
+    top: 20px;
+    visibility: hidden;
+    z-index: 1;
+}
+
+li:hover ul#submenu{
+    opacity: 1;
+    display: block;
+    top: 60px;
+    visibility: visible;
+}
+#submenu li{
+    width: 40vh;
+    float: none;
+    top: -.5rem;
+}
+
+#submenu li{
+    background-color: whitesmoke;
+}
+#submenu li a{
+    font-style: italic;
+    text-align: left;
+    color: #333;
+}
+#submenu  a:hover{
+    margin-left: 1rem;
+}
+
+
+
+#menu{
+    left: -14rem;
+    opacity: 0;
+    position: absolute;
+    top: 20px;
+    visibility: hidden;
+    z-index: 1;
+}
+
+li:hover ul#menu{
+    opacity: 1;
+    display: block;
+    top: 60px;
+    visibility: visible;
+}
+#menu li{
+    width: 40vh;
+    float: none;
+    top: -.5rem;
+}
+
+#menu li{
+    background-color: whitesmoke;
+}
+#menu li a{
+    font-style: italic;
+    text-align: right;
+    color: #333;
+}
+#menu  a:hover{
+    margin-right: 1rem;
+}
+
+
+
+/* icon css end */
+.content {
+    display: flex;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: -10rem;
+}
+
+.content1 {
+    display: flex;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 45rem;
+}
+
+
+.left-content {
+    width: 50%;
+    padding: 5rem;
+    font-size: 40px;
+    font-weight: lighter;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+.left-content p,
+span {
+    color: #243305;
+}
+
+.right-content {
+    width: 50%;
+    line-height: 1.8;
+    padding: 5rem;
+}
+
+.right-content p,
+span {
+    color: #666;
+}
+
+span {
+    font-size: 20px;
+    font-style: italic;
+}
+
+.rmbtn {
+    width: 150px;
+    height: 50px;
+    border: 1px solid #333;
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+    transition: 1s;
+    color: #333;
+}
+
+.rmbtn::before,
+.rmbtn::after {
+    position: absolute;
+    background: #eee;
+    z-index: -1;
+    transition: 1s;
+    content: '';
+}
+
+.rmbtn::before {
+    height: 50px;
+    width: 130px;
+}
+
+.rmbtn::after {
+    width: 150px;
+    height: 30px;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.rmbtn:hover::before {
+    width: 0px;
+    background: #fff;
+}
+
+.rmbtn:hover::after {
+    height: 0px;
+    background: #fff;
+}
+
+.rmbtn:hover {
+    background: #fff;
+}
+
+.backimg {
+    display: flex;
+}
+
+.backimg p {
+    margin-left: -90rem;
+    margin-top: 20rem;
+    color: whitesmoke;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 40%;
+    font-weight: 900;
+    text-transform: uppercase;
+    word-spacing: 12px;
+    font-size: 3rem;
+}
+
+
+.backimg img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    margin-top: 0rem;
+}
+
+
+.section-div {
+    display: flex;
+    gap: 10rem;
+    padding: 5rem;
+    color: #666;
+    width: 100%;
+}
+
+.left-section {
+    width: 33.3%;
+}
+
+.left-section p {
+    color: rgb(3, 55, 3);
+}
+
+.right-section {
+    width: 33.3%;
+}
+
+.right-section p {
+    color: rgb(3, 55, 3);
+}
+
+.middle-section {
+    width: 20%;
+}
+
+.middle-section img {
+    margin-top: 5px;
+    width: 50vh;
+    margin-left: -3rem;
+    height: 65vh;
+}
+
+#sd {
+    color: rgb(3, 55, 3);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 20rem;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 30px;
+}
+
+#ds {
+    color: rgb(3, 55, 3);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 1rem;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 30px;
+
+}
+
+#pu {
+    padding-left: 1rem;
+}
+
+.section-div p {
+    font-style: italic;
+    padding-left: 17rem;
+    line-height: 3;
+}
+
+.section-div h4 {
+    padding-left: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.wineimg {
+    display: flex;
+    gap: .7rem;
+    padding-left: 1.2rem;
+}
+
+.wine-images img:hover {
+    opacity: 0.7;
+    transition: .42s all ease-in-out;
+    cursor: pointer;
+}
+
+.wine-images img {
+    width: 19%;
+}
+
+.con {
+    padding-top: 18rem;
+    margin-top: -2rem;
+    background-color: whitesmoke;
+    height: 10vh;
+}
+
+.content #prime {
+    font-size: 35px;
+    font-weight: lighter;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    word-spacing: 10px;
+    color: rgb(3, 55, 3);
+    padding-left: 12rem;
+}
+
+.content #dm {
+    color: #333;
+    margin-left: 30rem;
+    border: 1px solid #000;
+    padding: 1rem;
+}
+
+.text {
+    font-size: 20px;
+    width: 65vh;
+}
+
+.about-us {
+    display: flex;
+    gap: 1rem;
+}
+
+.middle img {
+    padding: 0.2rem;
+    margin-left: -3.5rem;
+    width: 90%;
+}
+
+.right img {
+    margin-top: 4px;
+    width: 96.5%;
+    margin-left: -7rem;
+}
+
+.left-content #lca {
+    margin-top: 2rem;
+    font-size: 17px;
+}
+
+.video-content img {
+    width: 100%;
+}
+
+.infosec img {
+    cursor: pointer;
+    width: 20%;
+}
+
+.infosec {
+    text-align: center;
+    font-size: 40px;
+    color: #243305;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+
+.infosec #small {
+    font-size: 20px;
+    font-style: italic;
+    color: rgb(1, 55, 3);
+}
+
+.image-text1 h6,
+h5 {
+    color: rgb(3, 55, 3);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 13.5rem;
+    font-size: 18px;
+}
+
+.image-text1 h5 {
+    font-size: 13px;
+    font-style: italic;
+    margin-left: 1rem;
+}
+
+.image-text1 span {
+    font-size: 20px;
+    font-style: italic;
+    margin-left: 15.5rem;
+}
+
+.image-text2 h5 {
+    font-size: 13px;
+    font-style: italic;
+    margin-left: 22rem;
+}
+
+.image-text2 span {
+    font-size: 20px;
+    font-style: italic;
+    margin-left: 35.9rem;
+}
+
+.image-text2 h6 {
+    color: rgb(3, 55, 3);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 33.5rem;
+    margin-top: -5rem;
+    font-size: 18px;
+}
+
+.image-text3 h5 {
+    font-size: 13px;
+    font-style: italic;
+    margin-left: 42rem;
+}
+
+.image-text3 span {
+    font-size: 20px;
+    font-style: italic;
+    margin-left: 55.5rem;
+}
+
+.image-text3 h6 {
+    color: rgb(3, 55, 3);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 53.5rem;
+    margin-top: -5rem;
+    font-size: 18px;
+}
+
+.image-text4 h5 {
+    font-size: 13px;
+    font-style: italic;
+    margin-left: 61rem;
+}
+
+.image-text4 span {
+    font-size: 20px;
+    font-style: italic;
+    margin-left: 75.5rem;
+}
+
+.image-text4 h6 {
+    color: rgb(3, 55, 3);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 73.5rem;
+    margin-top: -5rem;
+    font-size: 18px;
+}
+
+.other-div {
+    display: flex;
+}
+
+.f-img img {
+    margin-left: 5rem;
+    width: 45%;
+}
+
+.s-img {
+    margin-left: -23rem;
+}
+
+.s-img img {
+    width: 49.5%;
+}
+
+.t-text p {
+    color: rgb(3, 55, 3);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    line-height: 1.5;
+    margin-left: -20rem;
+}
+
+.t-text #n {
+    color: #666;
+    font-size: 17px;
+    line-height: 2;
+    margin-top: 30px;
+}
+
+.t-text span {
+    color: rgb(40, 55, 3);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    margin-left: -20rem;
+}
+
+.t-text {
+    width: 20%;
+
+}
+
+.t-text #li {
+    margin-left: -7rem;
+    width: 13vh;
+}
+
+.t-text #il {
+    margin-left: -7rem;
+    width: 13vh;
+    margin-top: 5rem;
+}
+
+.t-text #bv {
+    font-size: 17px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 2rem;
+}
+
+.about-us .middle p {
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(3, 55, 3);
+    margin-left: -50px;
+}
+
+.about-us .middle span {
+    font-size: 18px;
+    color: rgb(36, 65, 36);
+    line-height: 2;
+    opacity: .9;
+    margin-left: -50px;
+}
+
+.about-us .right p {
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(3, 55, 3);
+    margin-left: -90px;
+}
+
+.about-us .right span {
+    font-size: 18px;
+    color: rgb(36, 65, 36);
+    line-height: 2;
+    opacity: .9;
+    margin-left: -90px;
+}
+
+.other-div .t-text h1 {
+    margin-left: -7rem;
+    font-size: 15px;
+    color: #243305;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 2rem;
+}
+
+.caption-left p {
+    color: rgb(3, 55, 3);
+    padding-left: 7rem;
+    font-size: 22px;
+    font-weight: 500;
+    width: 31%;
+    line-height: 1.5;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.cap {
+    background: #FAF9F5;
+    height: 90vh;
+}
+
+.caption-left span {
+    margin-left: 15rem;
+    color: rgb(1, 55, 3);
+}
+
+.caption-right span {
+    margin-left: 72rem;
+    color: rgb(1, 55, 3);
+}
+
+.caption-middle img {
+    width: 14%;
+    margin-left: 40rem;
+    margin-top: -10rem;
+
+}
+
+.caption-right p {
+    line-height: 1.5;
+    color: rgb(3, 55, 3);
+    padding-left: 65rem;
+    font-size: 22px;
+    font-weight: 500;
+    width: 91%;
+    margin-top: -10rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.js-img img {
+    width: 100%;
+    height: 60vh;
+}
+
+.main-con .left-info p {
+    padding-left: 3rem;
+    color: #243305;
+    line-height: 3rem;
+    font-weight: 900;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 38px;
+    width: 45%;
+}
+
+.main-con .left-info span {
+    padding-left: 3rem;
+    line-height: 3rem;
+    color: rgb(3, 55, 3);
+}
+
+.main-con .left-info i {
+    padding-left: 3.5rem;
+    color: rgb(40, 55, 3);
+}
+
+.main-con .left-info a {
+    padding-left: 0.5rem;
+    color: #243305;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+
+.main-con .left-info #ph {
+    padding-left: 0.3rem;
+    line-height: 3rem;
+}
+
+.main-con .right-info {
+    margin-left: 50rem;
+    margin-top: -15rem;
+    line-height: 4.5rem;
+}
+
+.main-con .right-info ::placeholder {
+    font-style: italic;
+}
+
+.main-con .right-info input {
+    width: 92%;
+    color: #666;
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 1rem;
+}
+
+.main-con .right-info textarea {
+    width: 92%;
+    padding: 1.3rem;
+    color: #333;
+    margin-top: .7rem;
+}
+
+.right-info #ribth {
+    margin-left: 31.8rem;
+    font-size: 16px;
+}
+
+iframe {
+    width: 100%;
+}
+
+.pictures {
+    margin-top: 3rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.pictures .leftside-img img {
+    width: 60vh;
+    cursor: pointer;
+    margin-left: 3.7rem;
+}
+
+.pictures .middleside-img img {
+    width: 60vh;
+    cursor: pointer;
+}
+
+.pictures .rightside-img img {
+    cursor: pointer;
+    width: 60vh;
+}
+
+.pictures .leftside-img p {
+    color: #243305;
+    width: 50vh;
+    text-align: center;
+    margin-left: 5.5rem;
+    font-weight: 600;
+    font-size: 22px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 2rem;
+    margin-top: 1.5rem;
+}
+
+.pictures .middleside-img p {
+    color: #243305;
+    width: 55vh;
+    text-align: center;
+    margin-left: 1.2rem;
+    font-weight: 600;
+    font-size: 22px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 2rem;
+    margin-top: 1.5rem;
+}
+
+.pictures .rightside-img p {
+    color: #243305;
+    width: 55vh;
+    text-align: center;
+    margin-left: 1.3rem;
+    font-weight: 600;
+    font-size: 22px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 2rem;
+    margin-top: 1.5rem;
+}
+
+.pictures .leftside-img a {
+    margin-left: 6.9rem;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 4rem;
+    color: rgb(36, 65, 36);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+.pictures .middleside-img a {
+    margin-left: 3.5rem;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 4rem;
+    color: rgb(36, 65, 36);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+.pictures .rightside-img a {
+    margin-left: 3.8rem;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 4rem;
+    color: rgb(36, 65, 36);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+.pictures .leftside-img a:hover {
+    opacity: .9;
+}
+
+.div .another-text h3 {
+    color: #FAF9F5;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: -12rem;
+    line-height: 2.5rem;
+    letter-spacing: 1.5px;
+    margin-left: 11rem;
+    font-size: 32px;
+    width: 70vh;
+    font-weight: 800;
+}
+
+.div .another-text img {
+    margin-top: 10rem;
+    width: 100%;
+    height: 50vh;
+}
+
+.div input {
+    margin-left: 52rem;
+    padding: 1rem;
+    width: 30%;
+    background: transparent;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+.div ::placeholder {
+    color: #f1f1f1;
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.div a {
+    padding: 1.1rem 3.5rem;
+    outline: none;
+    color: #FAF9F5;
+    font-weight: 900;
+    background: rgba(150, 208, 208, .35);
+}
+
+.div a:hover {
+    background: rgba(209, 209, 209, .35);
+    backdrop-filter: blur(5px);
+}
+
+.foot-text .foot {
+    text-align: center;
+}
+
+.foot-text .foot p {
+    margin-top: 2.5rem;
+    color: #243305;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.foot-text .foot span {
+    line-height: 3;
+    color: rgb(36, 65, 36);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 17px;
+}
+
+.footer {
+    display: flex;
+}
+
+.footer .left-footer p {
+    line-height: 1.5;
+    margin-top: 4rem;
+    width: 70%;
+    margin-left: 3.5rem;
+    color: #333;
+    font-size: 16px;
+    letter-spacing: .1px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.footer .middle-footer p {
+    width: 70%;
+    line-height: 1.5;
+    margin-top: 4rem;
+    color: #333;
+    font-size: 16px;
+    letter-spacing: .1px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.footer .right-footer p {
+    width: 70%;
+    line-height: 1.5;
+    margin-top: 4rem;
+    color: #333;
+    font-size: 16px;
+    padding-left: 5rem;
+    letter-spacing: .1px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.cpyright {
+    text-align: center;
+}
+
+.cpyright span {
+    color: #466605;
+    letter-spacing: 1px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 2;
+}
+
+
+
+
+/* Media section start */
+
+@media (max-width: 420px) {
+    header #r {
+        margin-left: -60rem;
+        width: 100%;
+    }
+
+    header #h {
+        width: 65vh;
+    }
+
+    .content1 .left-content p {
+        font-size: 37px;
+        color: #243305;
+        font-weight: 500;
+        line-height: 1.4;
+        width: 40vh;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin-left: -3.5rem;
+    }
+
+    .content1 .left-content {
+        font-size: 18px;
+        width: 60vh;
+    }
+
+    .content1 .left-content span {
+        margin-left: -3.5rem;
+        line-height: 3rem;
+        color: rgb(3, 55, 3);
+    }
+
+    .content1 .right-content {
+        margin-left: -32.5rem;
+        font-size: 1.2rem;
+        width: 100vh;
+        margin-top: 20rem;
+    }
+
+    .content1 .right-content .rmbtn {
+        font-size: 18px;
+    }
+
+    .backimg img {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .backimg p {
+        color: #fff;
+        font-weight: 800;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin-left: -25rem;
+        font-size: 25px;
+        width: 60%;
+        margin-top: 11rem;
+    }
+
+    .infosec p {
+        color: #243305;
+        font-size: 35px;
+        margin-left: 1rem;
+        font-weight: 500;
+        width: 87%;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        line-height: 1.5;
+    }
+
+    .infosec #small {
+        font-weight: 100;
+        margin-top: -2rem;
+        color: rgb(1, 55, 3);
+    }
+
+    .section-div .left-section #sd {
+        margin-left: -23rem;
+    }
+
+    .section-div .left-section p {
+        margin-left: -20rem;
+    }
+
+    .section-div .left-section h4 {
+        margin-left: -4rem;
+        width: 45vh;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .section-div .middle-section img {
+        display: none;
+    }
+
+    .section-div .right-section #ds {
+        line-height: 40;
+        margin-left: -29rem;
+
+    }
+
+    .section-div .right-section #pu {
+        margin-top: -36rem;
+        margin-left: -29rem;
+    }
+
+    .section-div .right-section h4 {
+        width: 45vh;
+        line-height: 1.8;
+        font-size: 15px;
+        margin-left: -29rem;
+    }
+
+    .wine-images .wineimg {
+        display: block;
+    }
+
+    .wine-images .wineimg img {
+        width: 100%;
+        margin-left: -10.5px;
+    }
+
+    .con .content #prime {
+        margin-left: -9.5rem;
+        width: 100%;
+    }
+
+    .con .content #dm {
+        margin-top: 500rem;
+        margin-left: -20rem;
+    }
+
+    .about-us .left-content #we {
+        margin-left: -3rem;
+        width: 50vh;
+        line-height: 1.5;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin-top: -5rem;
+        font-weight: 500;
+        font-size: 35px;
+        color: #243305;
+    }
+
+    .about-us .left-content #in {
+        width: 100vh;
+        font-size: 20px;
+        margin-left: -3rem;
+        margin-top: -10rem;
+    }
+
+    .about-us .left-content .text {
+        margin-left: -3rem;
+        width: 38vh;
+        font-size: 18px;
+        color: #666;
+        margin-top: 1.5rem;
+    }
+
+    .about-us .left-content #lca {
+        margin-left: -3rem;
+        margin-top: 2.5rem;
+    }
+
+    .about-us .middle img {
+        width: 40vh;
+        margin-top: 37rem;
+        margin-left: -12.3rem;
+    }
+
+    .about-us .middle p {
+        margin-left: -12rem;
+        font-size: 30px;
+
+    }
+
+    .about-us .middle span {
+        margin-left: -12rem;
+        font-size: 18px;
+    }
+
+    .about-us .right img {
+        width: 40vh;
+        margin-top: 75rem;
+        margin-left: -23.5rem;
+    }
+
+    .about-us .right p {
+        margin-left: -23rem;
+        font-size: 30px;
+    }
+
+    .about-us .right span {
+        margin-left: -23rem;
+        font-size: 18px;
+    }
+
+    .video-content .video img {
+        width: 100%;
+        height: 30vh;
+    }
+
+    .infosec img {
+        margin-top: .4rem;
+        width: 40vh;
+        margin-left: 1.5rem;
+        display: block;
+
+    }
+
+    .infosec #third {
+        margin-top: 10rem;
+    }
+
+    .image-text1 h6 {
+        margin-left: -4.5rem;
+        color: #243305;
+        margin-top: -99rem;
+    }
+
+    .image-text1 h5 {
+        margin-top: .7rem;
+        margin-left: -3.7rem;
+    }
+
+    .image-text1 span {
+        margin-left: 10.5rem;
+        color: #333;
+    }
+
+    .infosec #two {
+        margin-top: 5rem;
+    }
+
+    .image-text2 h6 {
+        margin-left: 2rem;
+        margin-top: 27rem;
+        margin-left: -26rem;
+    }
+
+    .image-text2 h5 {
+        margin-left: -3rem;
+        margin-top: .5rem;
+    }
+
+    .image-text2 span {
+        color: #333;
+        margin-left: 11rem;
+    }
+
+    .image-text3 h6 {
+        margin-left: -45.5rem;
+        margin-top: 33rem;
+    }
+
+    .image-text3 h5 {
+        margin-top: 1rem;
+        margin-left: -3rem;
+    }
+
+    .image-text3 span {
+        margin-left: 10.5rem;
+        color: #333;
+    }
+
+    .image-text4 h6 {
+        margin-top: 21rem;
+        margin-left: -67rem;
+    }
+
+    .image-text4 h5 {
+        margin-top: 1rem;
+        margin-left: -4rem;
+    }
+
+    .image-text4 span {
+        color: #333;
+        margin-left: 10.5rem;
+    }
+
+    .other-div {
+        display: block;
+    }
+
+    .other-div .f-img img {
+        width: 40vh;
+        margin-left: 2rem;
+    }
+
+    .other-div .s-img img {
+        width: 40vh;
+        margin-top: 1rem;
+        margin-left: 25rem;
+    }
+
+    .other-div .t-text p {
+        font-size: 40px;
+        margin-top: 4rem;
+        margin-left: 2rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        width: 50vh;
+    }
+
+    .other-div .t-text span {
+        margin-left: 10rem;
+        font-size: 20px;
+        width: 50vh;
+    }
+
+    .other-div .t-text #n {
+        width: 40vh;
+    }
+
+    .other-div .t-text #li {
+        margin-left: 3rem;
+        width: 13vh;
+    }
+
+    .other-div .t-text h1 {
+        margin-left: 2.8rem;
+        width: 50vh;
+        font-size: 20px;
+        color: #243305;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin-top: 2rem;
+    }
+
+    .other-div .t-text #il {
+        margin-top: 7rem;
+        margin-left: 3rem;
+        width: 10vh;
+
+    }
+
+    .fa-bars {
+        margin-left: -46rem;
+        margin-top: -.5rem;
+    }
+
+    .caption-left p {
+        margin-left: -6rem;
+        width: 55vh;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: 500;
+    }
+
+    .caption-left span {
+        margin-left: 9.9rem;
+    }
+
+    .caption-middle img {
+        margin-left: 6.2rem;
+        width: 50%;
+        margin-top: 5rem;
+    }
+
+    .caption-right p {
+        margin-left: -63rem;
+        width: 155vh;
+        margin-top: 10rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: 500;
+    }
+
+    .caption-right span {
+        margin-left: 9.8rem;
+    }
+
+    .js-img img {
+        width: 100%;
+        height: 40vh;
+        margin-top: 20rem;
+    }
+
+    .main-con .left-info p {
+        width: 100%;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: 900;
+        line-height: 3rem;
+        font-size: 35px;
+        margin-left: -1rem;
+    }
+
+    .main-con .left-info span {
+        margin-left: -1rem;
+        line-height: 4rem;
+        font-size: 27px;
+    }
+
+    .main-con .left-info i {
+        margin-left: -1rem;
+        color: rgb(40, 55, 3);
+        font-size: 20px;
+    }
+
+    .main-con .left-info a {
+        color: rgb(1, 55, 3);
+        font-size: 16px;
+        line-height: 2rem;
+    }
+
+    .main-con .right-info {
+        margin-top: 3rem;
+        line-height: 4rem;
+    }
+
+    .main-con .right-info textarea {
+        margin-left: -48rem;
+        width: 38vh;
+        font-size: 16px;
+    }
+
+    .main-con .right-info input {
+        margin-left: -48rem;
+        width: 38vh;
+    }
+
+    .right-info #ribth {
+        margin-left: -36.1rem;
+    }
+
+    .con .content #dm {
+        margin-top: 7rem;
+        width: 43%;
+        padding: 1rem;
+        margin-left: -14rem;
+        height: 55px;
+        color: #243305;
+    }
+
+    .pictures {
+        display: block;
+    }
+
+    .pictures .leftside-img img {
+        cursor: pointer;
+        width: 85%;
+        margin-left: 1.8rem;
+    }
+
+    .pictures .middleside-img img {
+        width: 85%;
+        cursor: pointer;
+        margin-left: 1.8rem;
+        margin-top: 7rem;
+    }
+
+    .pictures .rightside-img img {
+        width: 85%;
+        cursor: pointer;
+        margin-top: 7rem;
+        margin-left: 1.8rem;
+    }
+
+    .pictures .leftside-img p {
+        margin-left: 1.4rem;
+        width: 40vh;
+    }
+
+    .pictures .middleside-img p {
+        margin-left: 1.1rem;
+        width: 40vh;
+    }
+
+    .pictures .rightside-img p {
+        margin-left: 1.3rem;
+        width: 40vh;
+    }
+
+    .pictures .leftside-img a {
+        margin-left: 2rem;
+        word-spacing: 5px;
+        font-size: 16px;
+        font-style: italic;
+        line-height: 4rem;
+        color: rgb(1, 55, 3);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        border-top: 1px solid #333;
+        border-bottom: 1px solid #333;
+    }
+
+    .pictures .middleside-img a {
+        margin-left: 2rem;
+        word-spacing: 5px;
+        font-size: 16px;
+        font-style: italic;
+        line-height: 4rem;
+        color: rgb(36, 65, 36);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        border-top: 1px solid #333;
+        border-bottom: 1px solid #333;
+    }
+
+    .pictures .rightside-img a {
+        margin-left: 2rem;
+        word-spacing: 5px;
+        font-size: 16px;
+        font-style: italic;
+        line-height: 4rem;
+        color: rgb(36, 65, 36);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        border-top: 1px solid #333;
+        border-bottom: 1px solid #333;
+    }
+
+    .div .another-text img {
+        width: 100%;
+        height: 60vh;
+    }
+
+    .div .another-text h3 {
+        margin-left: 1.7rem;
+        margin-top: -23rem;
+        letter-spacing: 1.5px;
+        width: 40vh;
+    }
+
+    .div .another-text input {
+        margin-left: 1.7rem;
+        margin-top: 2rem;
+        width: 85%;
+        padding: 1.5rem;
+    }
+
+    .div .another-text a {
+        margin-left: 1.6rem;
+        line-height: 7;
+        background: rgba(209, 209, 209, .35);
+        font-size: 20px;
+        padding: 1.5rem 9.4rem;
+    }
+
+    .footer .left-footer p {
+        width: 43vh;
+        margin-left: 1rem;
+        text-align: center;
+    }
+
+    .footer .middle-footer p {
+        width: 40vh;
+        text-align: center;
+        margin-top: 12rem;
+        margin-left: -23.4rem;
+    }
+
+    .footer .right-footer p {
+        width: 40vh;
+        text-align: center;
+        margin-top: 18rem;
+        margin-left: -26.1rem;
+    }
+
+    .cpyright span {
+        font-size: 15px;
+    }
+}
+
+
+@media (max-width: 380px) {
+    header #h {
+        margin-top: 5rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    header #r {
+        margin-top: 5rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .content1 .left-content p {
+        font-size: 37px;
+        color: rgb(3, 55, 3);
+        line-height: 1.4;
+        width: 50vh;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin-left: -3.5rem;
+        margin-top: -10rem;
+    }
+
+    .content1 .right-content {
+        margin-left: -28.7rem;
+        font-size: 1.2rem;
+        width: 100vh;
+        margin-top: 13rem;
+    }
+
+    .backimg img {
+        width: 100%;
+    }
+
+    .backimg p {
+        color: #fff;
+        font-weight: 800;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin-left: -22rem;
+        font-size: 20px;
+        width: 60%;
+        margin-top: 8rem;
+    }
+
+    .section-div .left-section h4 {
+        margin-left: -4rem;
+        width: 50vh;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .section-div .right-section h4 {
+        width: 50vh;
+        line-height: 1.8;
+        font-size: 15px;
+        margin-left: -29rem;
+    }
+
+    .about-us .left-content #we {
+        margin-left: -3rem;
+        width: 50vh;
+        line-height: 1.5;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin-top: -10rem;
+        font-weight: 500;
+        font-size: 35px;
+        color: #243305;
+    }
+
+    .about-us .left-content .text {
+        margin-left: -3rem;
+        width: 48vh;
+        font-size: 17px;
+        color: #666;
+    }
+
+    .about-us .middle img {
+        width: 50vh;
+        margin-top: 30rem;
+        margin-left: -11.5rem;
+    }
+
+    .about-us .middle p {
+        margin-left: -11rem;
+    }
+
+    .about-us .middle span {
+        margin-left: -11rem;
+    }
+
+    .about-us .right img {
+        width: 50vh;
+        margin-top: 70rem;
+        margin-left: -22rem;
+    }
+
+    .about-us .right p {
+        margin-left: -21.5rem;
+    }
+
+    .about-us .right span {
+        margin-left: -21.5rem;
+    }
+
+    .infosec p {
+        text-align: center;
+    }
+
+    .infosec img {
+        margin-left: 3rem;
+    }
+
+    .image-text1 h6 {
+        margin-left: -6rem;
+        color: #243305;
+        margin-top: -82rem;
+    }
+
+    .image-text1 h5 {
+        margin-top: .7rem;
+        margin-left: -4.7rem;
+    }
+
+    .image-text1 span {
+        margin-left: 9.5rem;
+        color: #333;
+    }
+
+    .infosec #two {
+        margin-top: 5rem;
+    }
+
+    .image-text2 h6 {
+        margin-top: 20rem;
+        margin-left: -27rem;
+    }
+
+    .image-text2 h5 {
+        margin-left: -4.5rem;
+        margin-top: .5rem;
+    }
+
+    .image-text2 span {
+        color: #333;
+        margin-left: 9.5rem;
+    }
+
+    .image-text3 h6 {
+        margin-left: -46.5rem;
+        margin-top: 25rem;
+    }
+
+    .image-text3 h5 {
+        margin-top: 1rem;
+        margin-left: -4rem;
+    }
+
+    .image-text3 span {
+        margin-left: 9.5rem;
+        color: #333;
+    }
+
+    .infosec #four {
+        margin-top: 5rem;
+    }
+
+    .image-text4 h6 {
+        margin-top: 20rem;
+        margin-left: -68rem;
+    }
+
+    .image-text4 h5 {
+        margin-top: 1rem;
+        margin-left: -5rem;
+    }
+
+    .image-text4 span {
+        color: #333;
+        margin-left: 9.5rem;
+    }
+
+    .other-div .f-img img {
+        width: 50vh;
+        margin-left: 1.4rem;
+    }
+
+    .other-div .s-img img {
+        width: 50vh;
+        margin-top: 1rem;
+        margin-left: 24.5rem;
+    }
+
+    .other-div .t-text p {
+        font-size: 35px;
+        margin-top: 4rem;
+        margin-left: 2rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        width: 60vh;
+    }
+
+    .other-div .t-text span {
+        margin-left: 10rem;
+        font-size: 20px;
+        width: 50vh;
+    }
+
+    .other-div .t-text #n {
+        width: 45vh;
+    }
+
+    .caption-left p {
+        margin-left: -5rem;
+        width: 70vh;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: 500;
+    }
+
+    .cap {
+        width: 62vh;
+        height: 160vh;
+    }
+
+    .caption-left span {
+        margin-left: 10.2rem;
+    }
+
+    .caption-middle img {
+        margin-left: 6.5rem;
+        width: 50%;
+        margin-top: 5rem;
+    }
+
+    .caption-right p {
+        margin-left: -63rem;
+        width: 210vh;
+        margin-top: 5rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: 500;
+    }
+
+    .caption-right span {
+        margin-left: 9.8rem;
+    }
+
+    .js-img img {
+        width: 62.2vh;
+        height: 43vh;
+        margin-top: 5rem;
+    }
+
+    .main-con .right-info textarea {
+        margin-left: -48rem;
+        width: 52vh;
+        font-size: 16px;
+    }
+
+    .main-con .right-info input {
+        margin-left: -48rem;
+        width: 52vh;
+    }
+
+    .pictures .leftside-img img {
+        margin-left: 1.6rem;
+    }
+
+    .pictures .leftside-img p {
+        margin-left: 1.1rem;
+        width: 50vh;
+    }
+
+    .pictures .middleside-img p {
+        margin-left: 1.2rem;
+        width: 50vh;
+    }
+
+    .pictures .rightside-img p {
+        margin-left: 1.2rem;
+        width: 50vh;
+        font-size: 21px;
+    }
+
+    .pictures .leftside-img a {
+        margin-left: 1.2rem;
+        word-spacing: 1px;
+        font-size: 16px;
+        font-style: italic;
+        line-height: 4rem;
+        color: rgb(36, 65, 36);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        border-top: 1px solid #333;
+        border-bottom: 1px solid #333;
+    }
+
+    .pictures .middleside-img a {
+        margin-left: 1.2rem;
+        word-spacing: 1px;
+        font-size: 16px;
+        font-style: italic;
+        line-height: 4rem;
+        color: rgb(36, 65, 36);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        border-top: 1px solid #333;
+        border-bottom: 1px solid #333;
+    }
+
+    .pictures .rightside-img a {
+        margin-left: 1.2rem;
+        word-spacing: 1px;
+        font-size: 16px;
+        font-style: italic;
+        line-height: 4rem;
+        color: rgb(36, 65, 36);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        border-top: 1px solid #333;
+        border-bottom: 1px solid #333;
+    }
+
+    .div .another-text h3 {
+        width: 53vh;
+        margin-left: 1.3rem;
+        font-size: 30px;
+    }
+
+    .div .another-text a {
+        padding: 1.5rem 8.4rem;
+    }
+
+    .footer .left-footer p {
+        width: 47vh;
+        text-align: center;
+        margin-left: 2rem;
+        font-size: 15px;
+    }
+
+    .footer .middle-footer p {
+        width: 50vh;
+        font-size: 15px;
+        text-align: center;
+        margin-top: 12rem;
+        margin-left: -20rem;
+    }
+
+    .footer .right-footer p {
+        width: 50vh;
+        font-size: 15px;
+        text-align: center;
+        margin-top: 20rem;
+        margin-left: -23.5rem;
+    }
+
+    .cpyright span {
+        font-size: 13px;
+    }
+}
